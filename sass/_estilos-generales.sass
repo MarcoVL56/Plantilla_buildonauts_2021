@@ -1,0 +1,206 @@
+body
+    padding-top: 10vh
+
+.fondo
+    background-color: $color-blanco
+
+.img-logo
+    max-width: 220px
+    object-fit: contain
+
+.lista
+    @extend %navegacion-flex
+    margin: 0
+
+.lista-contenida
+    list-style: none
+    padding: 0 10px
+
+.link
+    text-decoration: none
+    color: $color-texto
+    font-size: 16px
+
+.borde
+    border-right: 1px solid $color-texto
+
+.boton-menu
+    font-size: 25px
+    color: $color-fondo-oscuro
+    cursor: pointer
+    display: none
+    border: 1px solid $color-fondo-oscuro
+    border-radius: 4px
+    line-height: 0.5
+    padding: 5px
+    margin: 5px
+
+ul.mostrar
+    top: 65px
+
+.contenedor-flex
+    @extend %flex
+
+.contenido
+    h1
+        @extend %titulo
+        color: $color-titulos
+
+.contenido
+    h3
+        @extend %tercer-titulo
+        color: $color-titulos
+
+.frase
+    color: $color-texto
+
+.img-nave
+    max-height: 500px
+    min-height: 50px
+    object-fit: contain
+
+.boton
+    background-color: $color-boton
+    border: $color-boton
+    color: $color-blanco
+    border-radius: 20px
+    padding: 5px 10px
+    font-size: 16px
+    margin-top: 2%
+    margin-right: 2%
+    cursor: pointer
+    text-decoration: none
+
+.boton:hover
+    background-color: $color-fondo
+    color: $color-blanco
+
+.oscuro
+    background-color: $color-fondo-oscuro
+    border: $color-fondo-oscuro
+    color: $color-blanco
+
+.oscuro:hover
+    background-color: $color-negro
+
+.claro
+    color: $color-negro
+    background-color: $color-fondo-claro
+    border: $color-fondo-claro
+    margin: 2%
+
+.contenedor-fondo
+    background-color: $color-seccion-secundaria
+
+.contenido
+    h2
+        @extend %subtitulo
+        color: $color-titulos
+
+.contenido
+    p
+        @extend %texto
+
+.img-icon
+    max-height: 80px
+    max-width: 80px
+    object-fit: contain
+
+.img-web
+    max-height: 120px
+    max-width: 120px
+    object-fit: contain
+
+.articulo
+    position: relative
+    padding: 2% 5%
+
+.articulo::before
+    content: "“"
+    position: absolute
+    left: 0
+    top: 0
+    line-height: 1
+    font-size: 100px
+    color: $color-fondo
+
+.articulo::after
+    content: "”"
+    position: absolute
+    right: 0
+    bottom: 0
+    line-height: 1
+    font-size: 100px
+    color: $color-fondo
+
+.borde-superior
+    border-top: 1px solid $color-negro
+
+.footer-fondo
+    background-color: $color-footer
+
+@media (max-width:989px)
+    .borde
+        border-right: none
+
+    .articulo
+        padding: 2% 8%
+
+@media (max-width: 858px)
+    .menu
+        height: 65px
+
+    .link
+        font-size: 12px
+
+    .boton-menu
+        display: inline-flex
+
+    .lista
+        position: fixed
+        width: 100vw
+        height: calc(30% - 65px)
+        background: #fff
+        top: -100vh
+        text-align: center
+        transition: top 0.4s
+        justify-content: start
+        align-items: start
+        flex-direction: column
+
+@media (max-width: 858px) and (orientation: landscape)
+    .lista-contenida
+        margin: 5px 0 0 0
+
+    .lista
+        overflow: scroll
+        height: calc(60% - 65px)
+
+@media (max-width: 768px)
+
+    .contenido
+        h1
+            font-size: 20px
+    .contenido
+        h2
+            font-size: 18px
+
+    .contenido
+        h3
+            font-size: 14px
+    .contenido
+        p
+            font-size: 12px
+
+    .boton
+        font-size: 12px
+
+    .img-web
+        max-width: 90px
+
+    .articulo::before, .articulo::after
+        font-size: 50px
+
+    .img-nave
+        max-height: 270px
+        min-height: 50px
